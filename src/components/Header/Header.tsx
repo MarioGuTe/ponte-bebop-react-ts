@@ -1,7 +1,14 @@
-/* eslint-disable react/self-closing-comp */
+import { useState } from "react";
+import HamburgerIcon from "../HamburgerIcon/HamburgerIcon";
 import s from "./particle/style.module.css";
 
 function Header() {
+  const [showNavbar, setShowNavbar] = useState<boolean>(false);
+
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar);
+  };
+
   return (
     <header>
       <nav>
@@ -10,18 +17,13 @@ function Header() {
             PONTE<span>BEBOP</span>
           </h1>
         </div>
-        <ul>
+        <ul className={`${showNavbar && s.active}`}>
           <li>Integrantes</li>
           <li>Bio</li>
           <li>Contacto</li>
           <li>Repertorio</li>
         </ul>
-        <div className={s.burger_menu}>
-          <div className="line_1 burger_child"></div>
-          <div className="line_2 burger_child"></div>
-          <div className="line_3 burger_child"></div>
-          <div className="line_3 burger_child"></div>
-        </div>
+        <HamburgerIcon onItemClick={handleShowNavbar} />
       </nav>
     </header>
   );
