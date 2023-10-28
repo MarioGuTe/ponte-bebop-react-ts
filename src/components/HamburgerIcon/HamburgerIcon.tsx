@@ -1,17 +1,20 @@
-/* eslint-disable react/self-closing-comp */
+import { Twirl as Hamburger } from "hamburger-react";
 import s from "./particle/style.module.css";
 
-interface Props {
-  onItemClick: () => void;
-}
+type Props = {
+  onItemClick: (prop: boolean) => void;
+};
 
 function HamburgerIcon({ onItemClick }: Props) {
   return (
-    <div className={s.burger_menu} onClick={onItemClick}>
-      <div className="line_1 burger_child"></div>
-      <div className="line_2 burger_child"></div>
-      <div className="line_3 burger_child"></div>
-      <div className="line_3 burger_child"></div>
+    <div className={s.burger_icon}>
+      <Hamburger
+        size={26}
+        distance="sm"
+        color="#FFFFFF"
+        rounded
+        onToggle={onItemClick}
+      />
     </div>
   );
 }
