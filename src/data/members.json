@@ -1,0 +1,40 @@
+{
+  "members": [
+    {
+      "name": "BENNY GÓMEZ",
+      "description": "Nacido en santiago y actualmente Baterista de sesión con experiencia en el mundo del jazz, soul, música latina y fusión.Egresado de la carrera de interpretación en jazz y música popular en el instituto profesional Projazz.Desde el 2014 dedicado al instrumento y hoy vinculado a varios proyectos de jazz como Sebastian Reyes Trio, el trío de Patricio Ramirez y Ciro Rubio Cuarteto entre otros, sumado a esto tambien imparte clases de batería de forma particular.",
+      "image": "./assets/images/benny-gomez-full.JPG",
+      "small_image": "./assets/images/benny-small.png",
+      "instagram": "https://www.instagram.com/gmbenny_/",
+      "mail": "mailto:mariogutierreztello@gmail.com",
+      "whatsapp": "https://wa.me/56945867403"
+    },
+    {
+      "name": "EMILIO HARTARD",
+      "description": "Emilio Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
+      "image": "./assets/images/emilio-b-w-1.png",
+      "small_image": "./assets/images/emilio-small.png",
+      "instagram": "https://www.instagram.com/emilio.andre.1914/",
+      "mail": "mailto:mariogutierreztello@gmail.com",
+      "whatsapp": "https://wa.me/56962363174"
+    },
+    {
+      "name": "MARIO GUTIÉRREZ",
+      "description": "Mario Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
+      "image": "./assets/images/mario-b-g.png",
+      "small_image": "./assets/images/mario-small.png",
+      "instagram": "https://www.instagram.com/mariogutierrezte/",
+      "mail": "mailto:mariogutierreztello@gmail.com",
+      "whatsapp": "https://wa.me/56942642310"
+    },
+    {
+      "name": "NICOLÁS PERALES",
+      "description": "Nicolás Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, error quisquam! Earum repudiandae, tempora maxime, culpa sunt repellendus",
+      "image": "./assets/images/nico-b-n.png",
+      "small_image": "./assets/images/nico-b-n.png",
+      "instagram": "https://www.instagram.com/pera_less/",
+      "mail": "mailto:mariogutierreztello@gmail.com",
+      "whatsapp": "https://wa.me/56974303146"
+    }
+  ]
+}
