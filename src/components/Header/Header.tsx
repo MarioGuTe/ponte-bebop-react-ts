@@ -4,12 +4,9 @@ import s from "./particle/style.module.css";
 
 function Header() {
   const [showNavbar, setShowNavbar] = useState<boolean>(false);
+
   const handleShowNavbar = (toggled: boolean) => {
-    if (toggled) {
-      setShowNavbar(true);
-    } else {
-      setShowNavbar(false);
-    }
+    return toggled ? setShowNavbar(true) : setShowNavbar(false);
   };
 
   return (
