@@ -1,5 +1,13 @@
+import HeroSection from "../../components/HeroSection/HeroSection";
+import MembersSection from "../../components/MembersSection/MembersSection";
+
 function Home() {
-  return <div>This is Home</div>;
+  return (
+    <>
+      <HeroSection />
+      <MembersSection />
+    </>
+  );
 }
 
 export default Home;
