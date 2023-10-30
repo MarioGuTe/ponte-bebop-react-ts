@@ -1,0 +1,8 @@
+.members_gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  min-height: 100%;
+  width: 100%;
+  margin-top: 2%;
+}
