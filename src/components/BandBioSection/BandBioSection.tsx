@@ -1,9 +1,10 @@
+import bioImage from "../../assets/images/bio-b-w.jpg";
 import s from "./particle/style.module.css";
 
 function BandBioSection() {
   return (
     <section className={s.band_bio_section}>
-      <div>
+      <div className={s.bio_text_container}>
         <h2>BIOGRAFÍA</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -17,6 +18,9 @@ function BandBioSection() {
           tempor sodales tortor sit amet, vulputate maximus nibh. Donec vitae
           pretium nibh. In mollis venenatis arcu, quis porttitor mi euismod et.
         </p>
+      </div>
+      <div className={s.bio_img_container}>
+        <img src={bioImage} alt="" loading="lazy" />
       </div>
     </section>
   );
