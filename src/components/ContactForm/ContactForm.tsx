@@ -1,48 +1,39 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import s from "./particle/style.module.css";
 
 function ContactForm() {
   return (
-    <form className="form hidden">
-      <div className="form-title">
+    <form className={s.form}>
+      <div className={s.form_title}>
         <h2>CONTACTO</h2>
       </div>
-      <div className="input-container">
-        <input
-          type="text"
-          className="contact-name"
-          autoComplete="off"
-          required
-        />
-        <label htmlFor="name" className="label-text">
-          <span className="span-text">Nombre</span>
+      <div className={s.input_container}>
+        <input type="text" autoComplete="off" required />
+        <label htmlFor="name" className={s.label_text}>
+          <span className={s.span_text}>Nombre</span>
         </label>
       </div>
-      <div className="input-container">
-        <input
-          type="text"
-          className="contact-email"
-          autoComplete="off"
-          required
-        />
-        <label htmlFor="email" className="label-text">
-          <span className="span-text">E-mail</span>
+      <div className={s.input_container}>
+        <input type="text" autoComplete="off" required />
+        <label htmlFor="email" className={s.label_text}>
+          <span className={s.span_text}>E-mail</span>
         </label>
       </div>
-      <div className="message-container">
-        <label htmlFor="name" className="label-textarea">
-          <span className="textarea-span-text">Mensaje</span>
+      <div className={s.message_container}>
+        <label htmlFor="name">
+          <span>Mensaje</span>
         </label>
         <textarea
           id="freeform"
-          className="contact-message"
+          className="contact_message"
           rows={4}
           cols={50}
           required
         ></textarea>
       </div>
-      <div className="submit-btn-container">
-        <button type="submit" className="submit-btn">
+      <div className="submit_btn_container">
+        <button type="submit" className="submit_btn">
           ENVIAR
         </button>
       </div>

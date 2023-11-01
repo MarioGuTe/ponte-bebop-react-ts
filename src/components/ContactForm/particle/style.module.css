@@ -1,0 +1,100 @@
+.form {
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px hsl(100 30% 10% / 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2em;
+  margin: 0 auto;
+  margin-top: 6em;
+  margin-bottom: 1em;
+}
+
+.form_title {
+  color: hsl(30 80% 55%);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.input_container {
+  margin-top: 3em;
+  width: 80%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.input_container label {
+  position: absolute;
+  font-size: 1.4rem;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  color: hsl(100 30% 15%);
+  pointer-events: none;
+  border-bottom: 1px solid hsl(100 30% 15%);
+}
+
+.input_container label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3.5px solid hsl(30 80% 55%);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.input_container input {
+  width: 80%;
+  height: 100%;
+  font-size: 1.2rem;
+  padding-bottom: 0.7em;
+  color: hsl(100 30% 15%);
+  border: none;
+  padding-top: 1.2em;
+  outline: none;
+}
+
+.input_container input:focus + .label_text .span_text,
+.input_container input:valid + .label_text .span_text {
+  transform: translateY(-145%);
+  color: hsl(30 80% 55%);
+  font-size: 1rem;
+}
+
+.span_text {
+  position: absolute;
+  bottom: 2px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.message_container {
+  margin-top: 2em;
+  width: 80%;
+}
+
+.message_container label {
+  font-size: 1.4rem;
+  width: 100%;
+  height: 100%;
+  color: hsl(100 30% 15%);
+  pointer-events: none;
+}
+
+.message_container textarea {
+  width: 100%;
+  height: 60%;
+  font-size: 1.2rem;
+  color: hsl(100 30% 15%);
+  padding-top: 0.5em;
+  padding-left: 0.4em;
+  border: 1px solid hsl(100 30% 15%);
+}
