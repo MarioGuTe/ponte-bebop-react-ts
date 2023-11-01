@@ -1,0 +1,66 @@
+.card_container {
+  min-height: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+}
+
+.card {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  box-shadow: 5px 5px 5px hsl(100 30% 10% / 0.25);
+  border-radius: 20px;
+}
+
+/* .hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1.125s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+} */
+
+.profile_image {
+  border-radius: 50%;
+  border: 4px solid hsl(30 80% 55%);
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  display: flex;
+}
+
+.profile_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1.4em 1em;
+}
+
+.profile_name {
+  color: hsl(30 80% 55%);
+  font-size: 1.65rem;
+}
+
+.profile_name::after {
+  content: "";
+  display: block;
+  justify-content: center;
+  height: 1px;
+  width: 3em;
+  background: hsl(100 30% 15%/0.85);
+  margin: 0.7em auto 0.5em;
+}
+
+.profile_body {
+  text-align: center;
+}

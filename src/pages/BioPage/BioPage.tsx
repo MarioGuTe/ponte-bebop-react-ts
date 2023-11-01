@@ -1,10 +1,7 @@
+import BioCard from "../../components/BioCard/BioCard";
+
 function BioPage() {
-  return (
-    <div>
-      <br />
-      This is BioPage
-    </div>
-  );
+  return <BioCard />;
 }
 
 export default BioPage;

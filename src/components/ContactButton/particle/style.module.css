@@ -1,0 +1,45 @@
+.submit_btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  width: 100%;
+}
+.submit_btn {
+  padding: 0.6em 35%;
+  background-color: hsl(30 80% 55%);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+}
+
+.submit_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: hsl(30 100% 70%);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.submit_btn:hover::before,
+.submit_btn:focus::before {
+  transform: scaleX(1);
+}
+
+.submit_btn {
+  z-index: 1;
+}

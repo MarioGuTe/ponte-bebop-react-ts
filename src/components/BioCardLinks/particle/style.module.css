@@ -1,0 +1,13 @@
+.links_section {
+  color: hsl(30 80% 55%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+}
+
+.icons_container {
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
