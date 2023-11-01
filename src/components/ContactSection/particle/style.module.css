@@ -1,0 +1,9 @@
+.contact_section {
+  min-height: 100%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid red;
+}

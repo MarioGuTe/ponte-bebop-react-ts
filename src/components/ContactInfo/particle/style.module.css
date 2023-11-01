@@ -1,0 +1,26 @@
+.contact_info_card {
+  color: hsl(0 100% 100%/0.9);
+  background-color: hsl(30 80% 55%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.contact_info_card h2 {
+  font-size: 1.3rem;
+}
+
+.contact_info_body h3 {
+  font-size: 1.125rem;
+}
+.contact_info_body {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5px;
+}
