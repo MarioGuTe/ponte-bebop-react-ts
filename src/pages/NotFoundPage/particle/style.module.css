@@ -1,0 +1,6 @@
+.not_found_section {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
