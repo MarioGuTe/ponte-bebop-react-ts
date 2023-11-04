@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import { useMemberContext } from "../../contexts/MemberContext";
 import s from "./particle/style.module.css";
 
-interface Props {
+type Props = {
   member: {
     name: string;
     description: string;
@@ -12,16 +13,19 @@ interface Props {
     mail: string;
     whatsapp: string;
   };
-}
+};
 
 function MembersCard({ member }: Props) {
   const navigate = useNavigate();
+
+  const { setMemberCard } = useMemberContext();
 
   const handleClick = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ): void => {
     e.preventDefault();
     navigate("/bio");
+    setMemberCard(member);
   };
 
   return (
@@ -29,7 +33,9 @@ function MembersCard({ member }: Props) {
       role="button"
       tabIndex={0}
       className={s.members_card}
-      onMouseDown={handleClick}
+      onMouseDown={(e) => {
+        return handleClick(e);
+      }}
     >
       <div className={s.image_text}>
         <h3>{member.name}</h3>
