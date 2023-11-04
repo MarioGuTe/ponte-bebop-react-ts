@@ -1,32 +1,55 @@
-/* eslint-disable react/jsx-no-constructed-context-values */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/function-component-definition */
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useMemo } from "react";
 
-export const MemberContext = createContext<unknown | undefined>(undefined);
+type MemberContextProviderProps = {
+  children: React.ReactNode;
+};
 
-const MemberContextProvider = ({ children }) => {
-  const [memberCard, setMemberCard] = useState({
-    member: {
-      name: "",
-      description: "",
-      instrument: "",
-      image: "",
-      small_image: "",
-      instagram: "",
-      mail: "",
-      whatsapp: "",
-    },
+type MemberData = {
+  name: string;
+  description: string;
+  instrument: string;
+  image: string;
+  small_image: string;
+  instagram: string;
+  mail: string;
+  whatsapp: string;
+};
+
+type MemberContextTypes = {
+  memberCard: MemberData;
+  setMemberCard: React.Dispatch<React.SetStateAction<MemberData>>;
+};
+
+export const MemberContext = createContext<MemberContextTypes | null>(null);
+
+export default function MemberContextProvider({
+  children,
+}: MemberContextProviderProps) {
+  const [memberCard, setMemberCard] = useState<MemberData>({
+    name: "",
+    description: "",
+    instrument: "",
+    image: "",
+    small_image: "",
+    instagram: "",
+    mail: "",
+    whatsapp: "",
   });
 
+  const memberContextProviderValue = useMemo(
+    () => ({
+      memberCard,
+      setMemberCard,
+    }),
+    [memberCard, setMemberCard]
+  );
+
   return (
-    <MemberContext.Provider value={{ memberCard, setMemberCard }}>
+    <MemberContext.Provider value={memberContextProviderValue}>
       {children}
     </MemberContext.Provider>
   );
-};
-
-export default MemberContextProvider;
+}
 
 export function useMemberContext() {
   const context = useContext(MemberContext);
