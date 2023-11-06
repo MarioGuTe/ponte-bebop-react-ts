@@ -1,7 +1,6 @@
 .band_bio_section {
   min-height: 100%;
   padding-top: 40px;
-  /* border: 2px solid red; */
 }
 
 .bio_text_container {
@@ -14,12 +13,12 @@
 }
 
 .bio_text_container h2 {
-  color: hsl(30 80% 55%);
+  color: var(--secondary-color);
   font-size: 1.8rem;
 }
 
 .bio_text_container p {
-  color: hsl(100 30% 15%);
+  color: var(--third-color);
   font-size: 1.25rem;
 }
 

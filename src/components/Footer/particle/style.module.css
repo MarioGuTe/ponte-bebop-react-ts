@@ -1,6 +1,6 @@
 footer {
-  color: white;
-  background: hsl(100 30% 15%);
+  color: var(--primary-color);
+  background: var(--third-color);
   padding: 12px 0 8px 0;
   width: 100%;
   display: flex;
@@ -19,6 +19,6 @@ footer p {
   margin-top: 6px;
   display: flex;
   gap: 10px;
-  color: white;
+  color: var(--primary-color);
   font-size: 1.5rem;
 }

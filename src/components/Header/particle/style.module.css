@@ -1,5 +1,5 @@
 header {
-  background: hsl(100 30% 15%);
+  background: var(--third-color);
   width: 100%;
   height: 40px;
   display: flex;
@@ -28,11 +28,11 @@ h1 {
   letter-spacing: 1px;
   font-size: 1.6rem;
   font-weight: bold;
-  color: white;
+  color: var(--primary-color);
 }
 
 h1 span {
-  color: hsl(30 80% 55%);
+  color: var(--secondary-color);
 }
 
 ul {
@@ -44,7 +44,7 @@ ul {
   position: absolute;
   right: 0px;
   top: 40px;
-  background: hsl(100 30% 15%);
+  background: var(--third-color);
   height: 100vh;
   width: 60%;
   transform: translateX(100%);
@@ -61,7 +61,7 @@ ul > li {
 }
 
 li:hover {
-  color: hsl(30 80% 55%);
+  color: var(--secondary-color);
 }
 
 ul.active {

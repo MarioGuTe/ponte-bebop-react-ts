@@ -7,11 +7,11 @@
 }
 .submit_btn {
   padding: 0.6em 35%;
-  background-color: hsl(30 80% 55%);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   border: none;
   outline: none;
-  color: white;
+  color: var(--primary-color);
   position: relative;
   letter-spacing: 1px;
   font-size: 1.3rem;

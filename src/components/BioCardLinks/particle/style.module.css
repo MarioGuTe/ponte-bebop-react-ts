@@ -1,5 +1,5 @@
 .links_section {
-  color: hsl(30 80% 55%);
+  color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   gap: 1.6em;

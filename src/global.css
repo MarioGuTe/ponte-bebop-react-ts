@@ -1,3 +1,9 @@
+:root {
+  --primary-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(30 80% 55%);
+  --third-color: hsl(100 30% 15%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
