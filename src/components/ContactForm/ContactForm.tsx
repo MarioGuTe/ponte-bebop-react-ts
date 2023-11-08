@@ -1,11 +1,15 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useFormik } from "formik";
-
+import emailjs from "@emailjs/browser";
 import ContactButton from "../ContactButton/ContactButton";
 import s from "./particle/style.module.css";
 
 function ContactForm() {
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const apiKey = import.meta.env.VITE_EMAILJS_API_KEY;
+
   const formik = useFormik({
     initialValues: {
       user_name: "",
@@ -13,7 +17,7 @@ function ContactForm() {
       user_message: "",
     },
     onSubmit: (values) => {
-      console.log("onsubmit", values);
+      emailjs.send(serviceID, templateID, values, apiKey);
     },
   });
 
@@ -26,10 +30,11 @@ function ContactForm() {
         <input
           type="text"
           autoComplete="off"
-          // required
+          required
           name="user_name"
           value={formik.values.user_name}
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
         />
         <label htmlFor="name" className={s.label_text}>
           <span className={s.span_text}>Nombre</span>
@@ -39,13 +44,14 @@ function ContactForm() {
         <input
           type="text"
           autoComplete="off"
-          // required
+          required
           name="user_email"
           value={formik.values.user_email}
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
         />
         <label htmlFor="email" className={s.label_text}>
-          <span className={s.span_text}>E-mail</span>
+          <span className={s.span_text}>E-mail </span>{" "}
         </label>
       </div>
       <div className={s.message_container}>
@@ -56,10 +62,11 @@ function ContactForm() {
           className="contact_message"
           rows={4}
           cols={50}
-          // required
+          required
           name="user_message"
           value={formik.values.user_message}
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
         ></textarea>
       </div>
       <ContactButton />
