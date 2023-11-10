@@ -12,8 +12,9 @@ function useForm() {
       user_email: "",
       user_message: "",
     },
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       emailjs.send(serviceID, templateID, values, apiKey);
+      resetForm();
     },
   });
 
