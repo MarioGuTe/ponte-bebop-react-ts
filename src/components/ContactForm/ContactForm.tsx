@@ -1,25 +1,11 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { useFormik } from "formik";
-import emailjs from "@emailjs/browser";
+import useForm from "../../hooks/useForm";
 import ContactButton from "../ContactButton/ContactButton";
 import s from "./particle/style.module.css";
 
 function ContactForm() {
-  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const apiKey = import.meta.env.VITE_EMAILJS_API_KEY;
-
-  const formik = useFormik({
-    initialValues: {
-      user_name: "",
-      user_email: "",
-      user_message: "",
-    },
-    onSubmit: (values) => {
-      emailjs.send(serviceID, templateID, values, apiKey);
-    },
-  });
+  const formik = useForm();
 
   return (
     <form className={s.form} onSubmit={formik.handleSubmit}>
