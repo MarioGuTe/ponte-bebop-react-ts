@@ -1,9 +1,15 @@
+import React from "react";
 import bioImage from "../../assets/images/bio-b-w.jpg";
 import s from "./particle/style.module.css";
 
-function BandBioSection() {
+type Props = {
+  refProp: React.MutableRefObject<HTMLElement | null>;
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function BandBioSection({ refProp }: Props, _ref: unknown) {
   return (
-    <section className={s.band_bio_section}>
+    <section className={s.band_bio_section} ref={refProp}>
       <div className={s.bio_text_container}>
         <h2>BIOGRAFÍA</h2>
         <p>
@@ -20,10 +26,10 @@ function BandBioSection() {
         </p>
       </div>
       <div className={s.bio_img_container}>
-        <img src={bioImage} alt="" loading="lazy" />
+        <img src={bioImage} alt="ponte-bebop-performing" loading="lazy" />
       </div>
     </section>
   );
 }
 
-export default BandBioSection;
+export default React.forwardRef(BandBioSection);
