@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import useCustomRef from "./hooks/useCustomRef";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import BioPage from "./pages/BioPage/BioPage";
@@ -6,11 +7,13 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  const refs = useCustomRef();
+
   return (
     <>
-      <Header />
+      <Header refs={refs} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home refs={refs} />} />
         <Route path="/bio" element={<BioPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
