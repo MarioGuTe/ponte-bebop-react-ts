@@ -7,7 +7,7 @@
 }
 .submit_btn {
   padding: 0.6em 35%;
-  background-color: var(--secondary-color);
+  background-color: hsl(30 100% 70%);
   border-radius: 10px;
   border: none;
   outline: none;
@@ -28,7 +28,7 @@
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-color: hsl(30 100% 70%);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
   transform: scaleX(0);

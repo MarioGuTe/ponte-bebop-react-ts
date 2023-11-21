@@ -17,6 +17,7 @@ nav {
   align-items: center;
   width: 100%;
   z-index: 1000;
+  height: 40px;
 }
 
 .nav_title_container {
@@ -39,7 +40,6 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   color: hsl(0 100% 100%/0.75);
   position: absolute;
   right: 0px;
@@ -48,7 +48,6 @@ ul {
   height: 100vh;
   width: 60%;
   transform: translateX(100%);
-  transition: transform 0.5s ease-in;
 }
 
 ul > li {
@@ -57,7 +56,6 @@ ul > li {
   letter-spacing: 0.5px;
   font-size: 1.2rem;
   margin-top: 2.75em;
-  /* opacity: 0; */
 }
 
 li:hover {
@@ -66,4 +64,24 @@ li:hover {
 
 ul.active {
   transform: translateX(0%);
+}
+
+@media (min-width: 600px) {
+  ul {
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    height: 40px;
+    top: 0;
+    background: none;
+    gap: 1em;
+    justify-content: flex-end;
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+  }
+
+  ul > li {
+    opacity: 1;
+    margin-top: 0;
+  }
 }
