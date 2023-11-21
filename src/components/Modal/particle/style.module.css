@@ -1,0 +1,31 @@
+.modal {
+  width: clamp(50%, 700px, 90%);
+  height: min(50%, 250px);
+  margin: auto;
+  padding: 0 2rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+}
+
+.modal p {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--third-color);
+}
+
+.dialog_button {
+  background: var(--secondary-color);
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  margin-top: 5%;
+}
