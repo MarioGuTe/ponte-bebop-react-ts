@@ -1,5 +1,7 @@
 .form {
-  width: 80%;
+  width: clamp(40%, 400px, 90%);
+  height: min(50%, 250px);
+  /* width: 80%; */
   border-radius: 20px;
   box-shadow: 5px 5px 5px hsl(100 30% 10% / 0.25);
   display: flex;
@@ -64,7 +66,7 @@
 
 .input_container input:focus + .label_text .span_text,
 .input_container input:valid + .label_text .span_text {
-  transform: translateY(-145%);
+  transform: translateY(-200%);
   color: var(--secondary-color);
   font-size: 1rem;
 }

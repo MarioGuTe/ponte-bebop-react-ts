@@ -6,3 +6,16 @@
   width: 100%;
   margin-top: 2%;
 }
+
+@media (min-width: 600px) {
+  .members_gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .members_gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -7,7 +7,8 @@
 }
 
 .card {
-  width: 88%;
+  width: clamp(35%, 700px, 90%);
+  height: min(50%, 250px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,17 +17,6 @@
   box-shadow: 5px 5px 5px hsl(100 30% 10% / 0.25);
   border-radius: 20px;
 }
-
-/* .hidden {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: all 1.125s ease;
-}
-
-.show {
-  opacity: 1;
-  transform: translateX(0);
-} */
 
 .profile_image {
   border-radius: 50%;
