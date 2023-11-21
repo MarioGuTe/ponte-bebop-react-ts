@@ -21,11 +21,13 @@ function MembersCard({ member }: Props) {
   const { setMemberCard } = useMemberContext();
 
   const handleClick = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+    e:
+      | React.MouseEvent<HTMLDivElement, MouseEvent>
+      | React.KeyboardEvent<HTMLDivElement>
   ): void => {
     e.preventDefault();
-    navigate("/bio");
     setMemberCard(member);
+    navigate(`/bio`);
   };
 
   return (
@@ -33,9 +35,8 @@ function MembersCard({ member }: Props) {
       role="button"
       tabIndex={0}
       className={s.members_card}
-      onMouseDown={(e) => {
-        return handleClick(e);
-      }}
+      onClick={handleClick}
+      onKeyDown={handleClick}
     >
       <div className={s.image_text}>
         <h3>{member.name}</h3>
