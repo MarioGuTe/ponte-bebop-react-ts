@@ -1,14 +1,35 @@
-/* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import { motion } from "framer-motion";
 import useForm from "../../hooks/useForm";
 import ContactButton from "../ContactButton/ContactButton";
 import s from "./particle/style.module.css";
 
-function ContactForm() {
+type Props = {
+  openModal: () => void;
+  closeModal: () => void;
+  modalState: boolean;
+};
+
+function ContactForm({ openModal, closeModal, modalState }: Props) {
   const formik = useForm();
 
+  const handleModalDisplay = () => {
+    if (modalState) {
+      closeModal();
+    } else {
+      openModal();
+    }
+  };
+
   return (
-    <form className={s.form} onSubmit={formik.handleSubmit}>
+    <motion.form
+      className={s.form}
+      onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        formik.handleSubmit();
+        handleModalDisplay();
+      }}
+    >
       <div className={s.form_title}>
         <h2>CONTACTO</h2>
       </div>
@@ -28,6 +49,7 @@ function ContactForm() {
       </div>
       <div className={s.input_container}>
         <input
+          id="name"
           type="text"
           autoComplete="off"
           required
@@ -36,12 +58,12 @@ function ContactForm() {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
-        <label htmlFor="email" className={s.label_text}>
+        <label className={s.label_text}>
           <span className={s.span_text}>E-mail </span>{" "}
         </label>
       </div>
       <div className={s.message_container}>
-        <label htmlFor="message">
+        <label>
           <span>Mensaje</span>
         </label>
         <textarea
@@ -53,10 +75,12 @@ function ContactForm() {
           value={formik.values.user_message}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-        ></textarea>
+        >
+          {}
+        </textarea>
       </div>
       <ContactButton />
-    </form>
+    </motion.form>
   );
 }
 
