@@ -100,3 +100,13 @@
   padding-left: 0.4em;
   border: 1px solid var(--third-color);
 }
+
+.message_container textarea:focus {
+  border: 2px solid var(--secondary-color);
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+}
