@@ -66,6 +66,16 @@ ul.active {
   transform: translateX(0%);
 }
 
+.go_back {
+  color: hsl(0 100% 100%/0.75);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.go_back:hover {
+  color: var(--secondary-color);
+}
+
 @media (min-width: 600px) {
   ul {
     flex-direction: row;
